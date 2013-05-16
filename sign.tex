@@ -15,6 +15,8 @@
 \usepackage{fontspec}
 \usepackage[RTLdocument]{bidi}
 \setromanfont[Mapping=tex-text]{Guttman Haim}
+\newcommand{\symbolglyph}[1]{{\fontspec{Symbola}#1}}
+\newcommand{\altsymbolglyph}[1]{{\fontspec{DejaVu Sans}#1}}
 
 \newfontfamily{\MerxSubstFont}[Script=Hebrew]{David CLM}
 \XeTeXinterchartokenstate=1
@@ -35,7 +37,6 @@
 %\tolerance=9999
 
 \newcommand{\changesize}[1]{\fontsize{#1}{1.3#1}\normalfont}
-
 
 
 \begin{document}
@@ -91,7 +92,36 @@ $\begin{tikzpicture}[line width=3pt, baseline=0.75cm]
 
 \begin{center}
 
-
+\changesize{120}
+המיליטריזם והלאומנות
 \end{center}
+
+\vfill
+
+\changesize{75}\fontspec{Guttman Haim-Condensed}
+
+\hspace{4cm}
+\begin{minipage}{0.8\linewidth}
+\begin{itemize}
+	\itemsep2cm
+		\renewcommand{\labelitemi}{\LR{\altsymbolglyph{~☠}}}
+	\item מגואלים בדם\\
+		\renewcommand{\labelitemi}{\LR{\symbolglyph{~💪}}}
+	\item משחיתים את החברה והיחיד\\
+		\renewcommand{\labelitemi}{\LR{\symbolglyph{~👹}}}
+	\item {\changesize{75}\fontspec{Guttman Haim-Condensed}מבוססים על שנאה, אלימות ואי־צדק}
+		\renewcommand{\labelitemi}{\LR{\symbolglyph{~💰}}}
+	\item {\changesize{75}\fontspec{Guttman Haim-Condensed}מהווים מעמסה מיותרת ומזיקה}
+\end{itemize}
+\end{minipage}
+
+\vfill
+
+~
+
+\vfill
+
+~
+
 
 \end{document}
